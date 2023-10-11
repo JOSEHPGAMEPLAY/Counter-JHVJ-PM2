@@ -12,15 +12,26 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Center(child: Text('Counters')),
+          title: const Center(child: Text('Counters')),
         ),
-      )
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+              ],
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
