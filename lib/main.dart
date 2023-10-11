@@ -51,6 +51,25 @@ class _MyAppState extends State<MyApp> {
                         ],
                       ),
                     ),
+                    Card(
+                      semanticContainer: true,
+                      child: Column(
+                        children: [
+                          Text(
+                            '$two',
+                            style: const TextStyle(fontSize: 150),
+                          ),
+                          FloatingActionButton.extended(
+                            backgroundColor: Colors.teal,
+                            onPressed: () {
+                              setState(() => two++);
+                            },
+                            label: const Text('Aumentar'),
+                          ),
+                          const Padding(padding: EdgeInsets.all(10))
+                        ],
+                      ),
+                    ),
               ],
             ),
           ],
