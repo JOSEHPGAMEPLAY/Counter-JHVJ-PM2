@@ -32,7 +32,25 @@ class _MyAppState extends State<MyApp> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                
+                  Card(
+                      semanticContainer: true,
+                      child: Column(
+                        children: [
+                          Text(
+                            '$one',
+                            style: const TextStyle(fontSize: 150),
+                          ),
+                          FloatingActionButton.extended(
+                            backgroundColor: Colors.teal,
+                            onPressed: () {
+                              setState(() => one++);
+                            },
+                            label: const Text('Aumentar'),
+                          ),
+                          const Padding(padding: EdgeInsets.all(10))
+                        ],
+                      ),
+                    ),
               ],
             ),
           ],
