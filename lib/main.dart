@@ -12,6 +12,11 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  
+  int one = 0;
+  int two = 0;
+  int three = 0;
+  int four = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +32,7 @@ class _MyAppState extends State<MyApp> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
+                
               ],
             ),
           ],
