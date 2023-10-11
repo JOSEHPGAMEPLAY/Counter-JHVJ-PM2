@@ -12,7 +12,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  
   int one = 0;
   int two = 0;
   int three = 0;
@@ -32,101 +31,117 @@ class _MyAppState extends State<MyApp> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(0,0,0,10),
-                    child: Card(
-                        semanticContainer: true,
-                        child: Column(
-                          children: [
-                            Text(
-                              '$one',
-                              style: const TextStyle(fontSize: 150),
-                            ),
-                            FloatingActionButton.extended(
-                              backgroundColor: Colors.teal,
-                              onPressed: () {
-                                setState(() => one++);
-                              },
-                              label: const Text('Aumentar'),
-                            ),
-                            const Padding(padding: EdgeInsets.fromLTRB(0,0,0,15))
-                          ],
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 10),
+                  child: Card(
+                    semanticContainer: true,
+                    child: Column(
+                      children: [
+                        Text(
+                          '$one',
+                          style: const TextStyle(fontSize: 150),
                         ),
-                      ),
-                  ),
-                    Padding(
-                    padding: const EdgeInsets.fromLTRB(0,0,0,10),
-                      child: Card(
-                        semanticContainer: true,
-                        child: Column(
-                          children: [
-                            Text(
-                              '$two',
-                              style: const TextStyle(fontSize: 150),
-                            ),
-                            FloatingActionButton.extended(
-                              backgroundColor: Colors.teal,
-                              onPressed: () {
-                                setState(() => two++);
-                              },
-                              label: const Text('Aumentar'),
-                            ),
-                            const Padding(padding: EdgeInsets.fromLTRB(0,0,0,15))
-                          ],
+                        FloatingActionButton.extended(
+                          backgroundColor: Colors.teal,
+                          onPressed: () {
+                            setState(() => one++);
+                          },
+                          label: const Text('Aumentar'),
                         ),
-                      ),
+                        const Padding(padding: EdgeInsets.fromLTRB(0, 0, 0, 15))
+                      ],
                     ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 10),
+                  child: Card(
+                    semanticContainer: true,
+                    child: Column(
+                      children: [
+                        Text(
+                          '$two',
+                          style: const TextStyle(fontSize: 150),
+                        ),
+                        FloatingActionButton.extended(
+                          backgroundColor: Colors.teal,
+                          onPressed: () {
+                            setState(() => two++);
+                          },
+                          label: const Text('Aumentar'),
+                        ),
+                        const Padding(padding: EdgeInsets.fromLTRB(0, 0, 0, 15))
+                      ],
+                    ),
+                  ),
+                ),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(0,0,0,10),
+                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 10),
                   child: Card(
-                        semanticContainer: true,
-                        child: Column(
-                          children: [
-                            Text(
-                              '$three',
-                              style: const TextStyle(fontSize: 150),
-                            ),
-                            FloatingActionButton.extended(
-                              backgroundColor: Colors.teal,
-                              onPressed: () {
-                                setState(() => three++);
-                              },
-                              label: const Text('Aumentar'),
-                            ),
-                            const Padding(padding: EdgeInsets.fromLTRB(0,0,0,15))
-                          ],
+                    semanticContainer: true,
+                    child: Column(
+                      children: [
+                        Text(
+                          '$three',
+                          style: const TextStyle(fontSize: 150),
                         ),
-                      ),
-                ),Padding(
-                    padding: const EdgeInsets.fromLTRB(0,0,0,10),
-                  child: Card(
-                        semanticContainer: true,
-                        child: Column(
-                          children: [
-                            Text(
-                              '$four',
-                              style: const TextStyle(fontSize: 150),
-                            ),
-                            FloatingActionButton.extended(
-                              backgroundColor: Colors.teal,
-                              onPressed: () {
-                                setState(() => four++);
-                              },
-                              label: const Text('Aumentar'),
-                            ),
-                            const Padding(padding: EdgeInsets.fromLTRB(0,0,0,15))
-                          ],
+                        FloatingActionButton.extended(
+                          backgroundColor: Colors.teal,
+                          onPressed: () {
+                            setState(() => three++);
+                          },
+                          label: const Text('Aumentar'),
                         ),
-                      ),
+                        const Padding(padding: EdgeInsets.fromLTRB(0, 0, 0, 15))
+                      ],
+                    ),
+                  ),
                 ),
-              ],)
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 10),
+                  child: Card(
+                    semanticContainer: true,
+                    child: Column(
+                      children: [
+                        Text(
+                          '$four',
+                          style: const TextStyle(fontSize: 150),
+                        ),
+                        FloatingActionButton.extended(
+                          backgroundColor: Colors.teal,
+                          onPressed: () {
+                            setState(() => four++);
+                          },
+                          label: const Text('Aumentar'),
+                        ),
+                        const Padding(padding: EdgeInsets.fromLTRB(0, 0, 0, 15))
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            )
           ],
         ),
+        floatingActionButton:
+            Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+          FloatingActionButton.extended(
+            onPressed: () {
+              setState(() => {
+                    one = 0,
+                    two = 0,
+                    three = 0,
+                    four = 0,
+                  });
+            },
+            label: const Text('Reset'),
+          ),
+        ]),
       ),
     );
   }
