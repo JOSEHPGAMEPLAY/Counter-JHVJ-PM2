@@ -17,6 +17,9 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        appBar: AppBar(
+          title: Center(child: Text('Counters')),
+        ),
       )
     );
   }
