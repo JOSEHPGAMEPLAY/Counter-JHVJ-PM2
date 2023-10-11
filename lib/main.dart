@@ -93,6 +93,24 @@ class _MyAppState extends State<MyApp> {
                           const Padding(padding: EdgeInsets.all(10))
                         ],
                       ),
+                    ),Card(
+                      semanticContainer: true,
+                      child: Column(
+                        children: [
+                          Text(
+                            '$four',
+                            style: const TextStyle(fontSize: 150),
+                          ),
+                          FloatingActionButton.extended(
+                            backgroundColor: Colors.teal,
+                            onPressed: () {
+                              setState(() => four++);
+                            },
+                            label: const Text('Aumentar'),
+                          ),
+                          const Padding(padding: EdgeInsets.all(10))
+                        ],
+                      ),
                     ),
               ],)
           ],
