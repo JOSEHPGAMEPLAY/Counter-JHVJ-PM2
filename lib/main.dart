@@ -66,7 +66,7 @@ class _MyAppState extends State<MyApp> {
                         FloatingActionButton.extended(
                           backgroundColor: Colors.teal,
                           onPressed: () {
-                            setState(() => two++);
+                            setState(() => two+=2);
                           },
                           label: const Text('Aumentar'),
                         ),
@@ -93,7 +93,7 @@ class _MyAppState extends State<MyApp> {
                         FloatingActionButton.extended(
                           backgroundColor: Colors.teal,
                           onPressed: () {
-                            setState(() => three++);
+                            setState(() => three+=3);
                           },
                           label: const Text('Aumentar'),
                         ),
@@ -115,7 +115,7 @@ class _MyAppState extends State<MyApp> {
                         FloatingActionButton.extended(
                           backgroundColor: Colors.teal,
                           onPressed: () {
-                            setState(() => four++);
+                            setState(() => four+=5);
                           },
                           label: const Text('Aumentar'),
                         ),
